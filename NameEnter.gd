@@ -15,12 +15,6 @@ func LoadUsername()->void:
 	if username != '':
 		get_tree().change_scene("res://Scenes/Instances/Chat.tscn")
 
-func checkUsername():
-	if username != "":
-		get_tree().change_scene("res://Scenes/Instances/Chat.tscn")
-	else:
-		pass
-
 func _on_Name_text_entered(new_text):
 	$Join.disabled = false
 	username = new_text
