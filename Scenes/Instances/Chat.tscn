@@ -1,0 +1,129 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://bold.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/Instances/ChatBox.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+content_margin_left = 5.0
+
+[sub_resource type="StyleBoxEmpty" id=5]
+content_margin_right = 5.0
+
+[sub_resource type="StyleBoxEmpty" id=6]
+content_margin_right = 5.0
+
+[sub_resource type="StyleBoxEmpty" id=7]
+content_margin_right = 5.0
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="Theme" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[node name="ChatBox" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -323.502
+margin_top = -386.002
+margin_right = 326.498
+margin_bottom = 388.998
+rect_min_size = Vector2( 650, 775 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_right = 650.0
+margin_bottom = 28.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = ExtResource( 1 )
+text = "settings"
+align = 2
+
+[node name="chatlog" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 32.0
+margin_right = 650.0
+margin_bottom = 743.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 747.0
+margin_right = 650.0
+margin_bottom = 775.0
+
+[node name="MenuButton" type="MenuButton" parent="VBoxContainer/HBoxContainer"]
+visible = false
+margin_right = 152.0
+margin_bottom = 34.0
+custom_fonts/font = ExtResource( 1 )
+text = "this thing"
+items = [ "Item 0", null, 0, false, false, 0, 0, null, "", false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="playername" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_right = 126.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 1 )
+text = "[Player]:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="message" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_left = 130.0
+margin_right = 590.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 200, 0 )
+focus_next = NodePath(".")
+size_flags_horizontal = 3
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 1 )
+placeholder_text = "#the_group_chat"
+placeholder_alpha = 0.243
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colormenu" type="OptionButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 594.0
+margin_right = 650.0
+margin_bottom = 28.0
+theme = SubResource( 13 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = ExtResource( 1 )
+text = "red"
+flat = true
+items = [ "red", null, false, 0, null, "orange", null, false, 1, null, "yellow", null, false, 2, null, "lime", null, false, 3, null, "green", null, false, 4, null, "cyan", null, false, 5, null, "blue", null, false, 6, null, "purple", null, false, 7, null, "pink", null, false, 8, null ]
+selected = 0
