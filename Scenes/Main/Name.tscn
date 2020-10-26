@@ -9,9 +9,9 @@
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
-[sub_resource type="StyleBoxEmpty" id=9]
+[sub_resource type="StyleBoxEmpty" id=4]
 
-[sub_resource type="StyleBoxEmpty" id=10]
+[sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=6]
 
@@ -23,6 +23,9 @@ content_margin_right = 5.0
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -53,8 +56,8 @@ placeholder_alpha = 0.5
 margin_top = 32.0
 margin_right = 650.0
 margin_bottom = 60.0
-custom_styles/hover = SubResource( 9 )
-custom_styles/pressed = SubResource( 10 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 6 )
 custom_styles/disabled = SubResource( 7 )
 custom_styles/normal = SubResource( 8 )
